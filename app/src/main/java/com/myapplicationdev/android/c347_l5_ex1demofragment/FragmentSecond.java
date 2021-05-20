@@ -10,10 +10,18 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-
 /**
- * A simple {@link Fragment} subclass.
+ * TODO: The fragment must extend Fragment
+ * Return the View object built from the layout file in onCreateView().
+ * You can  access the View object if needed.
+ * The layout file is just like the layout file for
+ * activity where we can add TextView etc
  */
+/*
+The majority of the time, we can code as if it were an Activity.
+The event listeners (such as OnClickListeners) for Fragment's buttons will be defined in the Fragment.
+
+* */
 public class FragmentSecond extends Fragment {
     Button btnAddText;
     TextView tvFrag2;
@@ -26,7 +34,9 @@ public class FragmentSecond extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_second, container, false);
+
         tvFrag2 = view.findViewById(R.id.tvFrag2);
         btnAddText = view.findViewById(R.id.btnAddTextFrag2);
 
